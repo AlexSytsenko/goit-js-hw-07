@@ -12,6 +12,7 @@ ul {
 
 body {
   padding: 30px;
+  background-color: #bdbdbd;
 }
 
 #gallery {
@@ -34,4 +35,17 @@ body {
 .gallery__img {
   width: 100%;
   height: 100%;
+}
+
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
 }

@@ -11,14 +11,10 @@ const images = [
     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     alt: "Group of Horses Running",
   },
-
 ];
 
 const listRef = document.querySelector("#gallery");
 
 const markup = images.reduce((string, item) => string + `<li class = "gallery__item"><img class = "gallery__img" src=${item.url} alt=${item.alt}></li>`, "");
-
-// Посмотрите что будет в консоли, одна длинная строка с "тегами"
-console.log(markup);
 
 listRef.insertAdjacentHTML("afterbegin", markup);

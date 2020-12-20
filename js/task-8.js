@@ -13,7 +13,7 @@ btnCreateRef.addEventListener("click", () => createBoxes(amount));
 btnDestroyRef.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
-  amount = +inputRef.value;
+  amount = Number(inputRef.value);
 
   const rezult = [];
   for (let i = 0; i < amount; i += 1) {
@@ -29,9 +29,8 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  while (boxesRef.firstChild) {
-    boxesRef.removeChild(boxesRef.firstChild);
-  }
+  boxesRef.innerHTML = "";
+
   inputRef.value = "";
 }
 
